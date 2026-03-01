@@ -1,0 +1,22 @@
+<Solution>
+  <Project Path="NetCoreAI_Project01_ApiDemo/NetCoreAI_Project01_ApiDemo.csproj" Id="c57e06fc-8d09-4e36-8f56-1c0d86c26735" />
+  <Project Path="NetCoreAI_Project02_ApiConsumeUI/NetCoreAI_Project02_ApiConsumeUI.csproj" Id="368bffba-9141-48f5-a8ee-3b7e1c39a84e" />
+  <Project Path="NetCoreAI_Project03_RapidApi/NetCoreAI_Project03_RapidApi.csproj" Id="e7a45853-e3f6-413e-a7d3-0775a71299de" />
+  <Project Path="NetCoreAI_Project04_GroqChat/NetCoreAI_Project04_GroqChat.csproj" Id="9350a691-e8fd-4ee9-a6fe-4d6b7a5a8a71" />
+  <Project Path="NetCoreAI_Project05_GroqWhisperAudioTranskript/NetCoreAI_Project05_GroqWhisperAudioTranskript.csproj" Id="da981f22-59d7-4642-84af-ca7de2bbc8bf" />
+  <Project Path="NetCoreAI_Project06_DallEImageGeneration/NetCoreAI_Project06_DallEImageGeneration.csproj" Id="27911874-6ae0-49fd-acb2-d56888a29c35" />
+  <Project Path="NetCoreAI_Project07_TesseractOcr/NetCoreAI_Project07_TesseractOcr.csproj" Id="0f86dda1-b8c9-4b1b-ac7f-d981f71c534e" />
+  <Project Path="NetCoreAI_Project08_HuggingFaceOcr/NetCoreAI_Project08_HuggingFaceOcr.csproj" Id="515bb475-3140-469f-8341-c422ba6a883b" />
+  <Project Path="NetCoreAI_Project09_MyMemoryTranslate/NetCoreAI_Project09_MyMemoryTranslate.csproj" Id="37e736e9-ca99-4625-8d3e-be6d9e93b9c8" />
+  <Project Path="NetCoreAI_Project10_TextToSpeech/NetCoreAI_Project10_TextToSpeech.csproj" Id="2399c454-d24c-4165-8cc2-513997344d81" />
+  <Project Path="NetCoreAI_Project11_TextToSpeechWithElevenLabs/NetCoreAI_Project11_TextToSpeechWithElevenLabs.csproj" Id="978db992-7898-4a45-9a3b-2e5c8e1809f0" />
+  <Project Path="NetCoreAI_Project12_SentimentAIApp/NetCoreAI_Project12_SentimentAIApp.csproj" Id="53b11d43-0ce3-42fe-af37-cb736d6f3aed" />
+  <Project Path="NetCoreAI_Project13_SentimentWithDegreeAIApp/NetCoreAI_Project13_SentimentWithDegreeAIApp.csproj" Id="ff11dcba-1a49-4541-a4d8-faf01f7e9b72" />
+  <Project Path="NetCoreAI_Project14_ArticleSummarizeAI/NetCoreAI_Project14_ArticleSummarizeAI.csproj" Id="f723ee76-f620-4032-a86b-3abe7f7f8912" />
+  <Project Path="NetCoreAI_Project15_WebScraping/NetCoreAI_Project15_WebScraping.csproj" Id="d945b73e-eefc-4a5d-b3fb-732cceda7f80" />
+  <Project Path="NetCoreAI_Project16_PdfAnalyze/NetCoreAI_Project16_PdfAnalyze.csproj" Id="c496594f-b605-493f-8108-0d7b062f6bdd" />
+  <Project Path="NetCoreAI_Project17_ImageDetection/NetCoreAI_Project17_ImageDetection.csproj" Id="4ec05d0f-fc8f-46f5-aa06-16ae224c9988" />
+  <Project Path="NetCoreAI_Project18_NewsSummarizeAI/NetCoreAI_Project18_NewsSummarizeAI.csproj" Id="9f556f0e-af6e-4f34-9036-00951099430e" />
+  <Project Path="NetCoreAI_Project19_CreateStory/NetCoreAI_Project19_CreateStory.csproj" Id="77eaa27a-8764-47bc-b583-6e0f2746fb4d" />
+  <Project Path="NetCoreAI_Project20_RecipeSuggestion/NetCoreAI_Project20_RecipeSuggestion.csproj" Id="55bf0de8-61ed-45ac-b6fd-e9a08eaa8862" />
+</Solution>

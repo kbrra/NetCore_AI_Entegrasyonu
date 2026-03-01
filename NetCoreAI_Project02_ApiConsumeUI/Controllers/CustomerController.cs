@@ -1,0 +1,95 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using NetCoreAI_Project02_ApiConsumeUI.Dtos;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+
+namespace NetCoreAI_Project02_ApiConsumeUI.Controllers
+{
+    public class CustomerController : Controller
+    {
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public CustomerController(IHttpClientFactory httpClientFactory)
+        {
+            this._httpClientFactory = httpClientFactory;
+        }
+
+        public async Task<IActionResult> CustomerList()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("https://localhost:7050/api/Customer");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var valeus = JsonConvert.DeserializeObject<List<ResultCustomerDto>>(jsonData);
+                return View(valeus);
+
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult CreateCustomer()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateCustomer(CreateCustomerDto createCustomerDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(createCustomerDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PostAsync("https://localhost:7050/api/Customer", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("CustomerList");
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> DeleteCustomer(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync("https://localhost:7050/api/Customer?id=" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("CustomerList");
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateCustomer(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("https://localhost:7050/api/Customer/GetCustomer?id=" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<GetByIdCustomerDto>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateCustomer(UpdateCustomerDto updateCustomerDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(updateCustomerDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PutAsync("https://localhost:7050/api/Customer", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("CustomerList");
+            }
+            return View();
+        }
+    }
+
+
+}
